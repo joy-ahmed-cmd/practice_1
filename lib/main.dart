@@ -10,46 +10,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
-        appBar: AppBar(backgroundColor: Colors.blue, title: Text('Hello')),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Container(
-                  height: 100,
-                  width: 200,
-                  color: Colors.yellow,
-                  child: Center(child: Text('so')),
-                ),
-                Container(
-                  height: 150,
-                  width: 100,
-                  color: Colors.green,
-                  child: Center(child: Text('so')),
-                ),Container(
-                  height: 150,
-                  width: 100,
-                  color: Colors.green,
-                  child: Center(child: Text('so')),
-                ),
-              ],
-            ),
-            Container(
-              width: 100,
-              height: 150,
-              color: Colors.red,
-              child: Center(child: Text('Bad')),
-            ),Container(
-              width: 200,
-              height: 100,
-              color: Colors.blue,
-              child: Center(child: Text('Bad')),
-            ),
-          ],
-        ),
+        appBar: AppBar(title: Text('Practice 2'), backgroundColor: Colors.blue),
       ),
     );
   }
