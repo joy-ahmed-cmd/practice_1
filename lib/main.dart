@@ -16,12 +16,13 @@ class MyApp extends StatelessWidget {
           title: Text('Practice 2'),
           backgroundColor: Colors.lightBlue,
         ),
-        body: InkWell(
-          onTap: () {
-            print('Tapped');
-          },
-          child: Center(
+        body: Center(
+          child: InkWell(
+            onTap: (){
+              print('Tapped On Container');
+            },
             child: Container(
+
               width: 200,
               height: 200,
               color: Colors.amber,
