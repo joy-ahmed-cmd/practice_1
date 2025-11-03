@@ -10,38 +10,70 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
       home: Scaffold(
-        appBar: AppBar(
-          title: Text('Practice 2'),
-          backgroundColor: Colors.lightBlue,
-        ),
-        body: InkWell(
-          onTap: () {
-            print('Tapped');
-          },
-          child: Center(
-            child: Container(
-              width: 200,
-              height: 200,
-              color: Colors.amber,
-              child: Center(
-                child: InkWell(
-                  child: Text(
-                    'Click Me',
-                    style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.green,
+        body: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: SingleChildScrollView(
+            child: Padding(
+              padding: const EdgeInsets.only(bottom: 8),
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 11),
+                    child: SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
+                        children: [
+                          Container(
+                            margin: EdgeInsets.only(right: 11),
+                            height: 200,
+                            width: 200,
+                            color: Colors.yellow,
+                          ),Container(
+                            margin: EdgeInsets.only(right: 11),
+                            height: 200,
+                            width: 200,
+                            color: Colors.yellow,
+                          ),Container(
+                            margin: EdgeInsets.only(right: 11),
+                            height: 200,
+                            width: 200,
+                            color: Colors.yellow,
+                          ),Container(
+                            margin: EdgeInsets.only(right: 11),
+                            height: 200,
+                            width: 200,
+                            color: Colors.yellow,
+                          )
+                        ],
+                      ),
                     ),
                   ),
-                  onTap: () {
-                    print('Click on Text');
-                  },
-                  onLongPress: () {
-                    print('Long pressed ');
-                  },
-                ),
+                  Container(
+                    margin: EdgeInsets.only(bottom: 11),
+                    height: 200,
+                    width: 500,
+                    color: Colors.green,
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(bottom: 11),
+                    height: 200,
+
+                    color: Colors.yellow,
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(bottom: 11),
+                    height: 200,
+
+                    color: Colors.brown,
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(bottom: 11),
+                    height: 200,
+
+                    color: Colors.grey,
+                  ),
+                ],
               ),
             ),
           ),
