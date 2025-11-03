@@ -33,7 +33,7 @@ class Myapp extends StatelessWidget {
                     children: [
                       Text(arrName[index], style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),),
                       Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: const EdgeInsets.all(9.0),
                         child: Text(arrName[index], style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),),
                       ),
                     ],
