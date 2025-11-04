@@ -16,7 +16,6 @@ class MyApp extends StatelessWidget {
           title: Text('Dashboard'),
         ),
         body: Container(
-          color: Colors.blue.shade50,
           width: double.infinity,
           height: double.infinity,
           child: Center(
@@ -25,7 +24,7 @@ class MyApp extends StatelessWidget {
               width: 100,
               decoration: BoxDecoration(
                 color: Colors.blueGrey,
-                borderRadius: BorderRadius.circular(10),
+                borderRadius: BorderRadius.only(topLeft: Radius.circular(21),bottomRight: Radius.circular(21)),
                border: Border.all(
                  width: 2
                ),
