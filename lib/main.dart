@@ -13,27 +13,24 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.blueGrey,
-          title: Text('Dashboard'),
+          title: Text('HELLO', style: TextStyle(fontWeight: FontWeight.bold)),
         ),
-        body: Container(
-          width: double.infinity,
-          height: double.infinity,
-          child: Center(
-            child: Container(
-              height: 100,
-              width: 100,
-              decoration: BoxDecoration(
-                color: Colors.blueGrey,
-                borderRadius: BorderRadius.only(topLeft: Radius.circular(21),bottomRight: Radius.circular(21)),
-               border: Border.all(
-                 width: 2
-               ),
-                boxShadow:[
-                  BoxShadow(blurRadius: 11)
-                ]
-              ),
+        body: Column(
+          children: [
+            Expanded(
+              flex: 2,
+              child: Container(height: 100, color: Colors.blue),
             ),
-          ),
+            Expanded(
+              flex: 3,
+              child: Container(height: 100, color: Colors.yellow),
+            ),
+            Expanded(
+              flex: 2,
+              child: Container(height: 100, color: Colors.green),
+            ),
+            Expanded(flex: 3, child: Container(height: 100, color: Colors.red)),
+          ],
         ),
       ),
     );
