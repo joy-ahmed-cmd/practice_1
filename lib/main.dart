@@ -10,38 +10,28 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Practice 2'),
-          backgroundColor: Colors.lightBlue,
+          backgroundColor: Colors.blueGrey,
+          title: Text('Dashboard'),
         ),
-        body: InkWell(
-          onTap: () {
-            print('Tapped');
-          },
+        body: Container(
+          color: Colors.blue.shade50,
+          width: double.infinity,
+          height: double.infinity,
           child: Center(
             child: Container(
-              width: 200,
-              height: 200,
-              color: Colors.amber,
-              child: Center(
-                child: InkWell(
-                  child: Text(
-                    'Click Me',
-                    style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.greenAccent,
-                    ),
-                  ),
-                  onTap: () {
-                    print('Click on Text');
-                  },
-                  onLongPress: () {
-                    print('Long pressed ');
-                  },
-                ),
+              height: 100,
+              width: 100,
+              decoration: BoxDecoration(
+                color: Colors.blueGrey,
+                borderRadius: BorderRadius.circular(10),
+               border: Border.all(
+                 width: 2
+               ),
+                boxShadow:[
+                  BoxShadow(blurRadius: 11)
+                ]
               ),
             ),
           ),
