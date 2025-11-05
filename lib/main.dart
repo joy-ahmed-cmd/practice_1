@@ -1,35 +1,21 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(Myapp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class Myapp extends StatelessWidget {
+  const Myapp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: Text("Hello"),
-          backgroundColor: Colors.blueAccent,
-        ),
+        appBar: AppBar(backgroundColor: Colors.blue),
         body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              CircleAvatar(
-                radius: 50,
-                backgroundImage: AssetImage(
-                  'assetss/imagess/WIN_20250711_11_22_19_Pro.jpg',
-                ),
-                child: Text(
-                  'Name',
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-              ),
-            ],
+          child: Text(
+            'Name',
+            style: TextStyle(fontFamily: "FontMain", fontSize: 22),
           ),
         ),
       ),
