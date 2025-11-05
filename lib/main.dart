@@ -1,41 +1,36 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(Myapp());
+  runApp(const MyApp());
 }
 
-class Myapp extends StatelessWidget {
-  const Myapp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    var arrName = [
-      'joy',
-      'halim',
-      'Khatun ',
-      'Saleha',
-      'Promita',
-      'Anjon',
-      'Ashraful',
-    ];
-
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
       home: Scaffold(
-        appBar: AppBar(title: Text('Hello'), backgroundColor: Colors.blueGrey),
-        body: ListView.separated(
-          itemBuilder: (context, index) {
-            return ListTile(
-              leading:Text('${index + 1}') ,
-              title: Text(arrName[index]),
-              subtitle:Text('Name') ,
-              trailing: Icon(Icons.ac_unit_outlined),
-            );
-          },
-          itemCount: arrName.length,
-          separatorBuilder: (context, index) {
-            return Divider(height: 15, thickness: 1);
-          },
+        appBar: AppBar(
+          title: Text("Hello"),
+          backgroundColor: Colors.blueAccent,
+        ),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              CircleAvatar(
+                radius: 50,
+                backgroundImage: AssetImage(
+                  'assetss/imagess/WIN_20250711_11_22_19_Pro.jpg',
+                ),
+                child: Text(
+                  'Name',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
