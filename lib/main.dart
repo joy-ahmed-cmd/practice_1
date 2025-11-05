@@ -9,17 +9,33 @@ class Myapp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var arrName = [
+      'joy',
+      'halim',
+      'Khatun ',
+      'Saleha',
+      'Promita',
+      'Anjon',
+      'Ashraful',
+    ];
+
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
-        appBar: AppBar(
-          title: Text('SOME THING'),
-          backgroundColor: Colors.blueGrey,
-        ),
-        body: Container(
-          color: Colors.blue,
-          margin: EdgeInsets.all(11),
-          child: Padding(padding: EdgeInsets.all(22),
-              child: Text('HELLO BUDDY!')),
+        appBar: AppBar(title: Text('Hello'), backgroundColor: Colors.blueGrey),
+        body: ListView.separated(
+          itemBuilder: (context, index) {
+            return ListTile(
+              leading:Text('${index + 1}') ,
+              title: Text(arrName[index]),
+              subtitle:Text('Name') ,
+              trailing: Icon(Icons.ac_unit_outlined),
+            );
+          },
+          itemCount: arrName.length,
+          separatorBuilder: (context, index) {
+            return Divider(height: 15, thickness: 1);
+          },
         ),
       ),
     );
