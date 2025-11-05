@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:practice_1/home.dart';
 
 void main() {
   runApp(Myapp());
@@ -9,16 +10,6 @@ class Myapp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(backgroundColor: Colors.blue),
-        body: Center(
-          child: Text(
-            'Name',
-            style: TextStyle(fontFamily: "FontMain", fontSize: 22),
-          ),
-        ),
-      ),
-    );
+    return MaterialApp(home: Home());
   }
 }
